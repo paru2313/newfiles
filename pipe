@@ -72,4 +72,8 @@ parameters {
             }
         }
     }
+    post{
+    cleanWs(){
+    }
+    }
 }
