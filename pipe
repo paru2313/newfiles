@@ -1,7 +1,4 @@
 pipeline {
-parameters {
-  choice choices: ['master', 'vinod'], description: 'please select your branch', name: 'branch'
-}
     agent any
   environment {
   PATH = "/opt/maven/bin:$PATH"
@@ -18,7 +15,7 @@ parameters {
 				[
 				$class: 'GitSCM', branches: [
 				[
-				name: "*/$branch"
+				name: '*/master'
 				]
 				],
 				extensions: [
